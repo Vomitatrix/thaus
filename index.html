@@ -2,66 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <style>
-            * {
-                margin: 0;
-                /* border: 1px solid red; */
-            }
-            body {
-                margin: 0;
-                width: 100vw;
-                height: 100vh;
-                display: flex;
-                flex-direction: row;
-            }
-            a {
-                display: block;
-                background-color: #0000;
-                width: 50vw;
-                height: 100vh;
-                color: ivory;
-                text-shadow: 0 0 0.2em black;
-                box-shadow: 0 0 30px 30px black inset;
-                font-size: 10rem;
-                text-decoration: none;
-                text-align: center;
-                line-height: 100vh;
-                z-index: 100;
-            }
-            .gate {
-                position: fixed;
-                height: 100vh;
-                width: 50vw;
-                top: 0;
-                bottom: 0;
-                background-position: center;
-                display: flex;
-                overflow: hidden;
-            }
-            .door {
-                width: 25vw;
-                background-image: url('https://images.photowall.com/products/50333/wooden-plank-wall-burned.jpg?h=699&q=85');
-                transition: transform 1s;
-            }
-            .door-left {
-                box-shadow: 0 0 15px 10px black inset;
-                left: 0;
-            }
-            .door-right {
-                box-shadow: 0 0 15px 10px black inset;
-                right: 0;
-            }
-            .gate-silas {
-                background-image: url('https://cdn.discordapp.com/attachments/369968596656455692/1015372354618130472/Graina_Continent_terrain.jpg');
-                background-size: auto 100vh;
-                left: 0;
-            }
-            .gate-thaus {
-                background-image: url('https://cdn.discordapp.com/attachments/832591162338181130/1015739815746084974/Masa.jpg');
-                background-size: 50vw auto;
-                right: 0;
-            }
-        </style>
+        <script defer src="script.js"></script>
+        <link rel="stylesheet" href="styles.css" />
         <link rel="icon" href="https://silas.thaus.net/icons/vtt.png" />
         <title>Thaus Home Page</title>
     </head>
@@ -86,37 +28,5 @@
             data-gate="thaus"
             >Thaus</a
         >
-        <script>
-            document.querySelectorAll('a').forEach(a => {
-                const gate = a.dataset.gate;
-
-                // on hover
-                a.addEventListener('mouseenter', e => {
-                    document.querySelector(
-                        `.door-${gate}-left`
-                    ).style.transform = 'translateX(-50%)';
-                    document.querySelector(
-                        `.door-${gate}-right`
-                    ).style.transform = 'translateX(50%)';
-                });
-                a.addEventListener('mouseleave', e => {
-                    document.querySelector(
-                        `.door-${gate}-left`
-                    ).style.transform = 'translateX(0%)';
-                    document.querySelector(
-                        `.door-${gate}-right`
-                    ).style.transform = 'translateX(0%)';
-                });
-                // on click
-                a.addEventListener('click', e => {
-                    document.querySelector(
-                        `.door-${gate}-left`
-                    ).style.transform = 'translateX(-100%)';
-                    document.querySelector(
-                        `.door-${gate}-right`
-                    ).style.transform = 'translateX(100%)';
-                });
-            });
-        </script>
     </body>
 </html>

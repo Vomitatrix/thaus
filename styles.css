@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+}
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+a {
+    display: block;
+    background-color: #0000;
+    width: 50vw;
+    height: 100vh;
+    color: ivory;
+    text-shadow: 0 0 0.2em black;
+    box-shadow: 0 0 30px 30px black inset;
+    font-size: 10rem;
+    text-decoration: none;
+    text-align: center;
+    line-height: 100vh;
+    z-index: 100;
+}
+.gate {
+    position: fixed;
+    height: 100vh;
+    width: 50vw;
+    top: 0;
+    bottom: 0;
+    background-position: center;
+    display: flex;
+    overflow: hidden;
+}
+.door {
+    width: 25vw;
+    background-image: url('img/door-texture.jpg');
+    transition: transform 1s;
+}
+.door-left {
+    box-shadow: 0 0 15px 10px black inset;
+    left: 0;
+}
+.door-right {
+    box-shadow: 0 0 15px 10px black inset;
+    right: 0;
+}
+.gate-silas {
+    background-image: url('img/graina.jpg');
+    background-size: auto 100vh;
+    left: 0;
+}
+.gate-thaus {
+    background-image: url('img/masa.jpg');
+    background-size: 50vw auto;
+    right: 0;
+}
