@@ -1,28 +1,31 @@
 'use strict';
-
+console.log(window);
 // gate open animation
 document.querySelectorAll('a').forEach(a => {
     const gate = a.dataset.gate;
+    const currDoorLeft = document.querySelector(`.door-${gate}-left`);
+    const currDoorRight = document.querySelector(`.door-${gate}-right`);
+    const currLink = document.querySelector(`.link-${gate}`);
 
     // on hover
-    a.addEventListener('mouseenter', e => {
-        document.querySelector(`.door-${gate}-left`).style.transform =
-            'translateX(-50%)';
-        document.querySelector(`.door-${gate}-right`).style.transform =
-            'translateX(50%)';
+    a.addEventListener('mouseenter', () => {
+        currDoorLeft.style.transform = 'translateX(-67%)';
+        currDoorRight.style.transform = 'translateX(67%)';
+        if (window.innerWidth > 1200) {
+            currLink.style.lineHeight = '150vh';
+        }
     });
-    a.addEventListener('mouseleave', e => {
-        document.querySelector(`.door-${gate}-left`).style.transform =
-            'translateX(0%)';
-        document.querySelector(`.door-${gate}-right`).style.transform =
-            'translateX(0%)';
+    a.addEventListener('mouseleave', () => {
+        currDoorLeft.style.transform = 'translateX(0%)';
+        currDoorRight.style.transform = 'translateX(0%)';
+        if (window.innerWidth > 1200) {
+            currLink.style.lineHeight = 'unset';
+        }
     });
     // on click
-    a.addEventListener('click', e => {
-        document.querySelector(`.door-${gate}-left`).style.transform =
-            'translateX(-100%)';
-        document.querySelector(`.door-${gate}-right`).style.transform =
-            'translateX(100%)';
+    a.addEventListener('click', () => {
+        currDoorLeft.style.transform = 'translateX(-100%)';
+        currDoorRight.style.transform = 'translateX(100%)';
     });
 });
 
