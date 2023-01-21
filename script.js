@@ -27,7 +27,7 @@ document.querySelectorAll('a').forEach(a => {
 
 // switching low res maps for high res
 const gateSilas = document.querySelector('.gate-silas');
-const gateMasa = document.querySelector('.gate-thaus');
+const gateThaus = document.querySelector('.gate-thaus');
 const graina = new Image();
 const masa = new Image();
 
@@ -37,5 +37,5 @@ graina.onload = () => {
 };
 masa.src = 'img/masa.jpg';
 masa.onload = () => {
-    gateSilas.style.backgroundImage = `url('${masa.src}')`;
+    gateThaus.style.backgroundImage = `url('${masa.src}')`;
 };
