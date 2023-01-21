@@ -46,12 +46,12 @@ a {
     right: 0;
 }
 .gate-silas {
-    background-image: url('img/graina.jpg');
+    background-image: url('img/graina-low.jpg');
     background-size: auto 100vh;
     left: 0;
 }
 .gate-thaus {
-    background-image: url('img/masa.jpg');
+    background-image: url('img/masa-low.jpg');
     background-size: 50vw auto;
     right: 0;
 }

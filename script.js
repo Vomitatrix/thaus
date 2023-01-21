@@ -24,3 +24,18 @@ document.querySelectorAll('a').forEach(a => {
             'translateX(100%)';
     });
 });
+
+// switching low res maps for high res
+const gateSilas = document.querySelector('.gate-silas');
+const gateMasa = document.querySelector('.gate-silas');
+const graina = new Image();
+const masa = new Image();
+
+graina.src = 'img/graina.jpg';
+graina.onload = () => {
+    gateSilas.style.backgroundImage = `url('${graina.src}')`;
+};
+masa.src = 'img/masa.jpg';
+masa.onload = () => {
+    gateSilas.style.backgroundImage = `url('${masa.src}')`;
+};
