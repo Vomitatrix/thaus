@@ -1,5 +1,6 @@
 'use strict';
 
+// gate open animation
 document.querySelectorAll('a').forEach(a => {
     const gate = a.dataset.gate;
 
@@ -28,14 +29,14 @@ document.querySelectorAll('a').forEach(a => {
 // switching low res maps for high res
 const gateSilas = document.querySelector('.gate-silas');
 const gateThaus = document.querySelector('.gate-thaus');
-const graina = new Image();
-const masa = new Image();
+const imgSilas = new Image();
+const imgThaus = new Image();
 
-graina.src = 'img/graina.jpg';
-graina.onload = () => {
-    gateSilas.style.backgroundImage = `url('${graina.src}')`;
+imgSilas.src = 'img/silas.png';
+imgSilas.onload = () => {
+    gateSilas.style.backgroundImage = `url('${imgSilas.src}')`;
 };
-masa.src = 'img/masa.jpg';
-masa.onload = () => {
-    gateThaus.style.backgroundImage = `url('${masa.src}')`;
+imgThaus.src = 'img/thaus.png';
+imgThaus.onload = () => {
+    gateThaus.style.backgroundImage = `url('${imgThaus.src}')`;
 };
