@@ -27,7 +27,7 @@ document.querySelectorAll('a').forEach(a => {
 
 // switching low res maps for high res
 const gateSilas = document.querySelector('.gate-silas');
-const gateMasa = document.querySelector('.gate-silas');
+const gateMasa = document.querySelector('.gate-thaus');
 const graina = new Image();
 const masa = new Image();
 
