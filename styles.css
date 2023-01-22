@@ -39,7 +39,6 @@ span {
     overflow: hidden;
 
     background-size: auto 100vh;
-    background-position: center;
 }
 
 .door {
@@ -60,12 +59,14 @@ span {
 
 .gate-silas {
     background: url('img/silas-low.png');
+    background-position: center;
     left: 0;
     top: 0;
 }
 
 .gate-thaus {
     background: url('img/thaus-low.png');
+    background-position: center;
     right: 0;
     bottom: 0;
 }
