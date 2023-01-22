@@ -13,6 +13,7 @@ document.querySelectorAll('a').forEach(a => {
         currDoorRight.style.transform = 'translateX(67%)';
         if (window.innerWidth > 1200) {
             currLink.style.lineHeight = '150vh';
+            currLink.style.fontSize = '0.5em';
         }
     });
     a.addEventListener('mouseleave', () => {
@@ -20,6 +21,7 @@ document.querySelectorAll('a').forEach(a => {
         currDoorRight.style.transform = 'translateX(0%)';
         if (window.innerWidth > 1200) {
             currLink.style.lineHeight = 'unset';
+            currLink.style.fontSize = 'unset';
         }
     });
     // on click
